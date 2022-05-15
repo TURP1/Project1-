@@ -1,0 +1,736 @@
+body{
+    margin: 25px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: 110px 200px auto 140px auto auto auto auto auto auto 80px;
+    grid-template-areas: 
+    "logo logo logo logo nav nav nav nav icon icon"
+    "header header header header header header header header header header "
+    "photo photo photo photo photo photo photo photo photo photo "
+    "achiev achiev achiev achiev achiev achiev achiev achiev achiev achiev "
+    "article1 article1 article1 article1 article1 article1 article1 article1 article1 article1 "
+    "sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 "
+    "inst inst inst inst inst inst inst inst inst inst "
+    "myself myself myself myself myself myself myself myself myself myself "
+    "sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 "
+    "consultation consultation consultation consultation consultation consultation consultation consultation consultation consultation "
+    "footer footer footer footer footer footer footer footer footer footer "
+;
+}
+/* Logo */
+
+.name{
+grid-area: logo;
+text-align: center;
+font-size: 28px;
+padding-top: 5px;
+}
+.container div p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+.container div p a{
+    text-decoration: none;
+}
+/* Nav */
+
+.grid-area-nav{
+    grid-area: nav;
+} 
+.nav{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 100%;
+}
+.button{
+    margin: 5px 7px;
+    padding: 5px;
+    margin: 5px 10px 10px;
+    font-size: 15px;
+    border: rgb(177, 239, 227) solid 2px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
+.button:hover{
+    cursor: pointer;
+}
+.button2{
+    margin: 5px 7px;
+    padding: 5px;
+    font-size: 15px;
+    border: rgb(177, 239, 227) solid 2px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
+.grid-area-icon{
+    grid-area: icon;     
+}
+/* Icons */
+
+.icons{
+    display: flex;
+    justify-content: space-around;
+    line-height: 90px;
+    margin-right: 20px;
+}
+/* Header */
+
+.background{
+    grid-area: header;
+    background-image: -moz-linear-gradient(left, rgb(232,247,227),rgb(177, 239, 227));
+    height: 200px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 200px;
+    
+}
+/* Article */
+.grid-area-photo{
+    grid-area: photo;    
+}
+.photo{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.photo:nth-child(1){
+    justify-self: center;
+}
+.logo{
+    max-width: 100%;
+    height: auto;
+}
+#nameunderlogo{
+    font-size: 40px;
+    text-align: center;
+}
+.mainphoto{
+    max-width: 100%;
+    height: auto;
+}
+.displayblock{
+    display: block;
+    height: auto;
+
+}
+/* Section1 */
+
+.achiev{
+    grid-area: achiev; 
+    background-image: -moz-linear-gradient(right, rgb(232,247,227),rgb(177, 239, 227));
+    height: 100px;
+    text-align: center;
+    font-size: 26px;  
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 45px 20px 0;    
+}
+/* Article 2 */
+.grid-area-article1{
+    grid-area: article1;
+}
+.article1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* Section 2 */
+.specfile{
+    width: 400px;
+    padding: 15px 10px 15px ;
+}
+.grid-area-article1 p{
+    text-align: center;
+    padding: 20px 0 20px;
+    margin: 0;
+}
+.grid-area-sec2{
+    grid-area: sec2;    
+}
+.background2{
+    background-image: -moz-linear-gradient(left, rgb(232,247,227),rgb(177, 239, 227));
+    height: min-content;
+    text-align: center;
+    font-size: 60px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-left: 20px;
+}
+/* Instagram */
+
+.grid-area-inst{
+    grid-area: inst;    
+}
+/* Section 3 */
+.grid-area-sec3{
+    grid-area: sec3;
+}
+.background3{
+    background-image: -moz-linear-gradient(left, rgb(232,247,227),rgb(177, 239, 227));
+    height: min-content;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10px;
+    justify-content: space-around;
+    padding: 25px 0 45px;
+    
+}
+/* Section 4 */
+.grid-area-myself{
+    grid-area: myself;
+    height:min-content;
+}
+.text_about_myself{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    line-height: 25px;
+}
+.background4{
+    background-image: -moz-linear-gradient(right, rgb(232,247,227),rgb(177, 239, 227));
+    height: min-content;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10px;
+    justify-content: space-around;
+    padding: 25px 0 30px;
+    
+}
+/* Section 5 */
+.grid-area-consultation{
+    grid-area: consultation;    
+}
+.grid-area-consultation div p{
+    text-align: center;
+    padding: 20px 0 20px;
+    margin: 0;
+    font-size: 40px;
+}
+.buttonflex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.button_width{
+    width: max-content;
+    padding: 0 20px ;
+    margin: 5px auto 5px;
+}
+.justify_text{
+    text-align: center;
+}
+.text_decoration_none{
+    text-decoration: none;
+}
+.color-black{
+    color: black;
+}
+a .color-black:hover{
+    color: rgb(64, 59, 59);
+    transition: 0.5s;
+}
+.font-size-40px{
+    font-size: 40px;
+}
+/* Footer */
+.grid-area-footer{
+    grid-area: footer;    
+}
+.background5{
+    background-image: -moz-linear-gradient(right, rgb(232,247,227),rgb(177, 239, 227));
+    text-align: start;
+    height: 100%;
+    padding: 0 120px 0 80px;
+    line-height: 80px;
+    
+    
+}
+.text_footer_left{
+    font-size: 18px;
+    float: left;
+}
+.text_footer_right{
+    font-size: 18px;
+    float: right;
+}
+.inst2{
+    font-size: 40px;
+    color:rgb(46, 43, 43); 
+    transition: 0.5s;
+}
+.telegram2{
+    font-size: 40px;
+    color: rgb(46, 43, 43);
+    transition: 0.5s;
+}
+.fb2{
+    font-size: 40px;
+    color: rgb(46, 43, 43);
+    transition: 0.5s;
+}
+.skype{
+    font-size: 40px;
+    color: rgb(46, 43, 43);
+    transition: 0.5s;
+}
+.viber{
+    font-size: 40px;
+    color: rgb(46, 43, 43);
+    transition: 0.5s;
+}
+.margin_bottom-5px{
+    margin-bottom: -5px;
+}
+
+
+/* Icons style */
+.inst{
+    font-size: 50px;
+    color:rgb(46, 43, 43); 
+    transition: 0.5s;
+}
+.telegram{
+    font-size: 50px;
+    color: rgb(46, 43, 43);
+    transition: 0.5s;
+}
+.fb{
+    font-size: 50px;
+    color: rgb(46, 43, 43);
+    transition: 0.5s;
+}
+.inst:hover{
+    color: #dc2743;;
+}
+.telegram:hover{
+    color: #229ED9;
+}
+.fb:hover{
+    color: blue;
+}
+.inst2:hover{
+    color: #dc2743;;
+}
+.telegram2:hover{
+    color: #229ED9;
+}
+.fb2:hover{
+    color: blue;
+}
+.skype:hover{
+    color: #229ED9;
+}
+.viber:hover{
+    color: #821ce0;
+}
+.container div:nth-child(1) p a{
+    text-decoration: none;
+}
+.container div:nth-child(1) p a:link{
+    color: rgb(46, 43, 43) ;
+}
+.container div:nth-child(1) p a:active{
+    color: rgb(100, 93, 93) ;
+}
+.container div:nth-child(1) p a:hover{
+    color: rgb(148, 174, 173) ;
+}
+/* Inst Section */
+#slider { /*положение слайдера*/
+    position: relative;
+	text-align: center;
+    top: 30px;
+}
+
+#slider{ /*центровка слайдера*/
+	margin: 0 auto;
+}
+
+#slides article{ /*все изображения справа друг от друга*/
+	width: 20%;
+	float: left;
+}
+
+#slides .image{ /*устанавливает общий размер блока с изображениями*/
+	width: 500%;
+	line-height: 0;
+}
+
+#overflow{ /*сркывает все, что находится за пределами этого блока*/
+	width: 100%;
+	overflow: hidden;
+}
+
+article img{ /*размер изображений слайдера*/
+	width: 20%;
+}
+
+/* #desktop:checked ~ #slider{ размер всего слайдера
+	max-width: 1240px; максимальнная длинна
+} */
+
+/*настройка переключения и положения для левой стрелки*/
+/*если свич1-5 активны, то идет обращение к лейблу из блока с id контролс*/
+#switch1:checked ~ #controls label:nth-child(5), 
+#switch2:checked ~ #controls label:nth-child(1),
+#switch3:checked ~ #controls label:nth-child(2),
+#switch4:checked ~ #controls label:nth-child(3),
+#switch5:checked ~ #controls label:nth-child(4){
+	background: url('prev.png') no-repeat; /*заливка фона картинкой без повторений*/
+	float: left;
+	margin: 90px 0 0 20px; /*сдвиг влево*/
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+
+/*настройка переключения и положения для правой стрелки*/
+#switch1:checked ~ #controls label:nth-child(2), 
+#switch2:checked ~ #controls label:nth-child(3),
+#switch3:checked ~ #controls label:nth-child(4),
+#switch4:checked ~ #controls label:nth-child(5),
+#switch5:checked ~ #controls label:nth-child(1){
+	background: url('next.png') no-repeat; /*заливка фона картинкой без повторений*/
+	float: right;
+	margin: 90px 20px 0 0; /*сдвиг вправо*/
+	display: block;
+	height: 68px;
+	width: 68px;
+    
+}
+
+label, a{ /*при наведении на стрелки или переключатели - курсор изменится*/
+	cursor: pointer;
+}
+
+.all input{ /*скрывает стандартные инпуты (чекбоксы) на странице*/
+	display: none;
+}
+
+/*позиция изображения при активации переключателя*/
+#switch1:checked ~ #slides .image{
+	margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image{
+	margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image{
+	margin-left: -300%;
+}
+
+#switch5:checked ~ #slides .image{
+	margin-left: -400%;
+}
+
+#controls{ /*положение блока всех управляющих элементов*/
+	margin: -23% 0 0 0;
+	width: 100%;
+	height: 50px;
+}
+
+#active label{ /*стиль отдельного переключателя*/
+	border-radius: 10px; /*скругление углов*/
+	display: inline-block; /*расположение в строку*/
+	width: 15px;
+	height: 15px;
+	background: #bbb;
+}
+
+#active{ /*расположение блока с переключателями*/
+	margin: 19% 0 0;
+	text-align: center;
+}
+
+#active label:hover{ /*поведение чекбокса при наведении*/
+	background: #76c8ff;
+	border-color: #777 !important; /*выполнение в любом случае*/
+}
+
+/*цвет активного лейбла при активации чекбокса*/
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4),
+#switch5:checked ~ #active label:nth-child(5){
+	background: #18a3dd;
+	border-color: #18a3dd !important;
+}
+
+#slides .image{ /*анимация пролистывания изображений*/
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls label:hover{ /*прозрачность стрелок при наведении*/
+	opacity: 0.6;
+}
+
+#controls label{ /*прозрачность стрелок при отводе курсора*/
+	transition: opacity 0.2s ease-out;
+}
+.padding-top{
+    /* padding: 7px 0 0 ; */
+    margin: 20px 0 0 ;
+    
+}
+article img:hover{
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+        
+}
+.margin-bottom-30px{
+    margin-bottom: -30px;
+}
+/*Floating Back-To-Top Button*/
+#myBtn {
+    position: fixed;
+    bottom: 15px;
+    float: right;
+    right: 15px;
+    width: min-content;
+    font-size: 20px;
+    border-color: rgba(85, 85, 85, 0.2);
+    background-color: rgb(100,100,100);
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 3;
+    color: white;
+
+}
+/*On Hover Color Change*/
+#myBtn:hover {
+    background-color: rgb(177, 239, 227);
+    color: black;
+    transition: 0.3s;
+}
+.fontfamilylinks{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media(min-width:921px){
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(10,1fr);
+        grid-template-rows: 110px 200px auto 140px auto auto auto auto auto auto 80px;
+        grid-template-areas: 
+        "logo logo logo logo nav nav nav nav icon icon"
+        "header header header header header header header header header header "
+        "photo photo photo photo photo photo photo photo photo photo "
+        "achiev achiev achiev achiev achiev achiev achiev achiev achiev achiev "
+        "article1 article1 article1 article1 article1 article1 article1 article1 article1 article1 "
+        "sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 "
+        "inst inst inst inst inst inst inst inst inst inst "
+        "myself myself myself myself myself myself myself myself myself myself "
+        "sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 "
+        "consultation consultation consultation consultation consultation consultation consultation consultation consultation consultation "
+        "footer footer footer footer footer footer footer footer footer footer "
+    ;
+    }
+    .text_footer_left{
+        font-size: 18px;
+        float: left;
+    }
+    .text_footer_right{
+        font-size: 18px;
+        float: right;
+    }
+}
+@media(max-width: 920px){
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(10,1fr);
+        grid-template-rows: 110px auto 200px auto 140px auto auto auto auto auto auto 80px;
+        grid-template-areas: 
+        "logo logo logo logo logo logo icon icon icon icon"
+        "nav nav nav nav nav nav nav nav nav nav "
+        "header header header header header header header header header header "
+        "photo photo photo photo photo photo photo photo photo photo "
+        "achiev achiev achiev achiev achiev achiev achiev achiev achiev achiev "
+        "article1 article1 article1 article1 article1 article1 article1 article1 article1 article1 "
+        "sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 "
+        "inst inst inst inst inst inst inst inst inst inst "
+        "myself myself myself myself myself myself myself myself myself myself "
+        "sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 "
+        "consultation consultation consultation consultation consultation consultation consultation consultation consultation consultation "
+        "footer footer footer footer footer footer footer footer footer footer "
+    ;}
+}
+.text_footer_left{
+    font-size: 15px;
+    float: left;
+}
+.text_footer_right{
+    font-size: 15px;
+    float: right;
+}
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -25px;
+    margin-bottom: 15px;
+    width: 100%;
+ }
+ .achiev{
+    grid-area: achiev; 
+    background-image: -moz-linear-gradient(right, rgb(232,247,227),rgb(177, 239, 227));
+    height: 100px;
+    text-align: center;
+    font-size: 22px;  
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 45px 10px 0;    
+}
+.font-size-40px{
+    font-size: 38px;
+}
+@media(max-width: 690px){
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(10,1fr);
+        grid-template-rows: 110px auto 150px auto auto 140px auto auto auto auto auto auto 80px;
+        grid-template-areas: 
+        "logo logo logo logo logo logo logo logo logo logo"
+        "nav nav nav nav nav nav nav nav nav nav "
+        "header header header header header header header header header header "
+        "icon icon icon icon icon icon icon icon icon icon"
+        "photo photo photo photo photo photo photo photo photo photo "
+        "achiev achiev achiev achiev achiev achiev achiev achiev achiev achiev "
+        "article1 article1 article1 article1 article1 article1 article1 article1 article1 article1 "
+        "sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 "
+        "inst inst inst inst inst inst inst inst inst inst "
+        "myself myself myself myself myself myself myself myself myself myself "
+        "sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 sec3 "
+        "consultation consultation consultation consultation consultation consultation consultation consultation consultation consultation "
+        "footer footer footer footer footer footer footer footer footer footer "
+    ;}
+
+}
+.photo{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.achiev{
+    grid-area: achiev; 
+    background-image: -moz-linear-gradient(right, rgb(232,247,227),rgb(177, 239, 227));
+    height: 100px;
+    text-align: center;
+    font-size: 18px;  
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 4px 0 4px;    
+}
+.icons{
+    display: flex;
+    justify-content: space-around;
+    line-height: 90px;
+}
+.ion-icon-little-size{
+    width: 36px;
+}
+.text_footer_left{
+    font-size: 13px;
+    float: left;
+    padding-top: 10px;
+}
+.text_footer_right{
+    font-size: 13px;
+    float: left;
+}
+.background{
+    grid-area: header;
+    background-image: -moz-linear-gradient(left, rgb(232,247,227),rgb(177, 239, 227));
+    height: 150px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 150px;
+}
+.background2{
+    background-image: -moz-linear-gradient(left, rgb(232,247,227),rgb(177, 239, 227));
+    height: min-content;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 15px;
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-left: 20px;
+}
+.background3{
+    background-image: -moz-linear-gradient(left, rgb(232,247,227),rgb(177, 239, 227));
+    height: min-content;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    justify-content: space-around;
+    padding: 25px 0 30px;   
+}
+.background4{
+    background-image: -moz-linear-gradient(right, rgb(232,247,227),rgb(177, 239, 227));
+    height: min-content;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    justify-content: space-around;
+    padding: 25px 0 30px;   
+}
+.background5{
+    background-image: -moz-linear-gradient(right, rgb(232,247,227),rgb(177, 239, 227));
+    text-align: start;
+    height: 100%;
+    padding: 0 120px 0 20px;
+    line-height: 30px;
+}
+.photo{
+    display: flex;
+    justify-content: space-around;
+    margin-top: -30px;
+}
+.icons-small{
+    font-size: 35px;
+}
+.font-size-40px{
+    font-size: 30px;
+}
+.text_decoration_none{
+    text-decoration: none;
+}
+#zapcons{
+    font-size: 30px;
+}
+.button_width{
+    width: max-content;
+    padding: 0 20px  4px;
+    margin: 5px auto 5px;
+}
